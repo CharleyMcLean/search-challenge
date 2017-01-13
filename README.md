@@ -1,11 +1,11 @@
 # Search an array of sorted numbers.
 
 
-**items**: An array of sorted ints, with no duplicates
-**n_items**: Number of elements in the items array
-**ascending**: non-zero if the array is sorted in ascending order
-**key**: the key to search for
-**type**: the type of match to find
+**items**: An array of sorted ints, with no duplicates<br/>
+**n_items**: Number of elements in the items array<br/>
+**ascending**: non-zero if the array is sorted in ascending order<br/>
+**key**: the key to search for<br/>
+**type**: the type of match to find<br/>
 
 This function finds the element in the array that best fits the search criteria. It returns the match type and the index of the matching item.
 
