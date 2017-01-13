@@ -102,13 +102,30 @@ def match_search_criteria(lst, key, criteria):
         >>> match_search_criteria([0, 2, 4, 6, 8], 0, 'LessThan')
         'NotFound'
         >>> match_search_criteria([0, 2, 4, 6, 8], 0, 'Equals')
-        'FoundExact', 0
+        ('FoundExact', 0)
         >>> match_search_criteria([0, 2, 4, 6, 8], 1, 'Equals')
         'NotFound'
         >>> match_search_criteria([0, 2, 4, 6, 8], 2, 'GreaterThanEquals')
-        'FoundExact', 0
+        ('FoundExact', 1)
         >>> match_search_criteria([0, 2, 4, 6, 8], 2, 'GreaterThan')
-        'NotGreater', 2
+        ('FoundGreater', 2)
+
+        >>> match_search_criteria([8, 6, 4, 2, 0], -1, 'LessThan')
+        'NotFound'
+        >>> match_search_criteria([8, 6, 4, 2, 0], 0, 'LessThan')
+        'NotFound'
+        >>> match_search_criteria([8, 6, 4, 2, 0], 4, 'LessThanEquals')
+        ('FoundExact', 2)
+        >>> match_search_criteria([8, 6, 4, 2, 0], 8, 'Equals')
+        ('FoundExact', 0)
+        >>> match_search_criteria([8, 6, 4, 2, 0], 5, 'GreaterThanEquals')
+        ('FoundGreater', 1)
+        >>> match_search_criteria([8, 6, 4, 2, 0], 2, 'GreaterThanEquals')
+        ('FoundExact', 3)
+        >>> match_search_criteria([8, 6, 4, 2, 0], 8, 'GreaterThan')
+        'NotFound'
+        >>> match_search_criteria([8, 6, 4, 2, 0], 9, 'GreaterThan')
+        'NotFound'
     """
 
     # check criteria using helper functions
@@ -133,7 +150,7 @@ def find_less_than(lst, key):
     current_index = 0
 
     for i in range(len(lst)):
-        if key < lst[i] and lst[i] == min(lst):
+        if key < lst[i] and lst[i] <= min(lst):
             return 'NotFound'
         elif lst[i] < key and lst[i] > current:
             current = lst[i]
@@ -192,7 +209,7 @@ def find_greater_than(lst, key):
     current_index = 0
 
     for i in range(len(lst)):
-        if key > lst[i] and key == max(lst):
+        if key > lst[i] and key >= max(lst):
             return 'NotFound'
         elif lst[i] > key and lst[i] < current:
             current = lst[i]
