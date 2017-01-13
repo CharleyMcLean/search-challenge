@@ -1,6 +1,6 @@
 # Search an array of sorted numbers.
 
-*
+
 * items    : An array of sorted ints, with no duplicates
 * n_items  : Number of elements in the items array
 * ascending: non-zero if the array is sorted in ascending order
@@ -46,7 +46,7 @@
 *
 * Examples
 * --------
-*  Given the input array [0, 2, 4, 6, 8] (ascending order)
+*  Given the input array `[0, 2, 4, 6, 8]` (ascending order)
 *
 *  +-----+-------------------+--------------+-------+
 *  | Key | Type              | Returns      | Index |
@@ -64,7 +64,7 @@
 *  |  2  | GreaterThan       | FoundGreater | 2     |
 *  +-----+-------------------+--------------+-------+
 *
-*  Given the input array [8, 6, 4, 2, 0] (descending order)
+*  Given the input array `[8, 6, 4, 2, 0]` (descending order)
 *
 *  +-----+-------------------+--------------+-------+
 *  | Key | Type              | Returns      | Index |
