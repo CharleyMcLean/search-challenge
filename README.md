@@ -1,11 +1,11 @@
 # Search an array of sorted numbers.
 
 
-items    : An array of sorted ints, with no duplicates
-n_items  : Number of elements in the items array
-ascending: non-zero if the array is sorted in ascending order
-key      : the key to search for
-type     : the type of match to find
+**items**: An array of sorted ints, with no duplicates
+**n_items**: Number of elements in the items array
+**ascending**: non-zero if the array is sorted in ascending order
+**key**: the key to search for
+**type**: the type of match to find
 
 This function finds the element in the array that best fits the search criteria. It returns the match type and the index of the matching item.
 
@@ -24,44 +24,44 @@ This function finds the element in the array that best fits the search criteria.
 
 Given the input array `[0, 2, 4, 6, 8]` (ascending order)
 
-+-----+-------------------+--------------+-------+
-| Key | Type              | Returns      | Index |
-+-----+-------------------+--------------+-------+
-| -1  | LessThanEquals    | NotFound     | X     |
-+-----+-------------------+--------------+-------+
-|  0  | LessThan          | NotFound     | X     |
-+-----+-------------------+--------------+-------+
-|  0  | Equals            | FoundExact   | 0     |
-+-----+-------------------+--------------+-------+
-|  1  | Equals            | NotFound     | X     |
-+-----+-------------------+--------------+-------+
-|  2  | GreaterThanEquals | FoundExact   | 1     |
-+-----+-------------------+--------------+-------+
-|  2  | GreaterThan       | FoundGreater | 2     |
-+-----+-------------------+--------------+-------+
++-----+-------------------+--------------+-------+<br/>
+| Key | Type              | Returns      | Index |<br/>
++-----+-------------------+--------------+-------+<br/>
+| -1  | LessThanEquals    | NotFound     | X     |<br/>
++-----+-------------------+--------------+-------+<br/>
+|  0  | LessThan          | NotFound     | X     |<br/>
++-----+-------------------+--------------+-------+<br/>
+|  0  | Equals            | FoundExact   | 0     |<br/>
++-----+-------------------+--------------+-------+<br/>
+|  1  | Equals            | NotFound     | X     |<br/>
++-----+-------------------+--------------+-------+<br/>
+|  2  | GreaterThanEquals | FoundExact   | 1     |<br/>
++-----+-------------------+--------------+-------+<br/>
+|  2  | GreaterThan       | FoundGreater | 2     |<br/>
++-----+-------------------+--------------+-------+<br/>
 
 
 Given the input array `[8, 6, 4, 2, 0]` (descending order)
 
-+-----+-------------------+--------------+-------+
-| Key | Type              | Returns      | Index |
-+-----+-------------------+--------------+-------+
-| -1  | LessThan          | NotFound     | X     |
-+-----+-------------------+--------------+-------+
-|  0  | LessThan          | NotFound     | X     |
-+-----+-------------------+--------------+-------+
-|  4  | LessThanEquals    | FoundExact   | 2     |
-+-----+-------------------+--------------+-------+
-|  8  | Equals            | FoundExact   | 0     |
-+-----+-------------------+--------------+-------+
-|  5  | GreaterThanEquals | FoundGreater | 1     |
-+-----+-------------------+--------------+-------+
-|  2  | GreaterThanEquals | FoundExact   | 3     |
-+-----+-------------------+--------------+-------+
-|  8  | GreaterThan       | NotFound     | X     |
-+-----+-------------------+--------------+-------+
-|  9  | GreaterThan       | NotFound     | X     |
-+-----+-------------------+--------------+-------+
++-----+-------------------+--------------+-------+<br/>
+| Key | Type              | Returns      | Index |<br/>
++-----+-------------------+--------------+-------+<br/>
+| -1  | LessThan          | NotFound     | X     |<br/>
++-----+-------------------+--------------+-------+<br/>
+|  0  | LessThan          | NotFound     | X     |<br/>
++-----+-------------------+--------------+-------+<br/>
+|  4  | LessThanEquals    | FoundExact   | 2     |<br/>
++-----+-------------------+--------------+-------+<br/>
+|  8  | Equals            | FoundExact   | 0     |<br/>
++-----+-------------------+--------------+-------+<br/>
+|  5  | GreaterThanEquals | FoundGreater | 1     |<br/>
++-----+-------------------+--------------+-------+<br/>
+|  2  | GreaterThanEquals | FoundExact   | 3     |<br/>
++-----+-------------------+--------------+-------+<br/>
+|  8  | GreaterThan       | NotFound     | X     |<br/>
++-----+-------------------+--------------+-------+<br/>
+|  9  | GreaterThan       | NotFound     | X     |<br/>
++-----+-------------------+--------------+-------+<br/>
 
 
 **Assumptions**:  
